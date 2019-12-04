@@ -3,15 +3,16 @@
 #include<stdlib.h>
 int main(void){
 
-  char num[]="72 69 76 76 79 87 79 82 76 68";
+  char num[1000];
   char sep[] = " "; 
   char *tok;
-  int numint;
+  int ch;
+  fgets(num, 1000, stdin);
   tok = strtok( num, sep );
   while( tok != NULL ){
-   numint = atoi(tok);
+   ch = atoi(tok);
   // printf("%d\n", numint);
-   printf("%c", numint);
+   printf("%c", ch);
    // printf( "%s\n", tok );
     tok = strtok( NULL, sep );  
   }
